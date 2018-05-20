@@ -1,6 +1,15 @@
-<h1>Bloc Chat</h1>
-<button type="button" class="new-room" ng-click="home.addRoom()">New Room</button></div>
-<div ng-repeat="room in home.rooms">
-    <p>{{ room.$value }}</p>
+<div class='nav-bar'>
+  <h1>Bloc Chat</h1>
+  <button type="button" class="new-room" ng-click="home.addRoom()">New Room</button>
+  <div ng-repeat="room in home.rooms">
     <p class="room-name" ng-click="home.setCurrentRoom(room)">{{ room.name }}</p>
+  </div>
+</div>
+<div class="chat-window">
+    <h3 style="text-align:center;">{{ home.currentRoom.name }}</h3>
+    <div class="messages" ng-repeat="message in home.messages">
+        <div class="username" style="text-align:center;">{{ message.username }}</div>
+        <div class="timestamp" style="text-align:center;">{{ message.sentAt }}</div>
+        <div class="user-message" style="text-align:center;">{{ message.content }}</div>
+    </div>
 </div>
