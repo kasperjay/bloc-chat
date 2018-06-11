@@ -1,12 +1,13 @@
-<section class="modal-box">
+<div class="modal-content">
     <div class="modal-header">
-        <h3 class="modal-title">Login</h3>
+        <h4 class="modal-title">Set a username</h4>
     </div>
-    <div class="modal-body">
-        <h5 class="modal-prompt">Enter a username</h5>
-            <input type="text" name="input" ng-model="modal.username" required>
-    </div>
-    <div class="modal-footer">
-        <button class="btn-new" type="button" ng-click="modal.createUsername()" ng-disabled="modal.username == null">Create user</button>
-    </div>
-</section>
+  <div class="modal-body">
+    <form ng-submit="setUsername(username)">
+        <input type="text" ng-model="username" placeholder="Enter Username">
+        <button>Submit</button>
+    </form>
+  </div>
+  <div class="modal-footer">
+  </div>
+</div>

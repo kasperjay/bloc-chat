@@ -3,12 +3,12 @@
         var currentUser = $cookies.get('blocChatCurrentUser');
         if (!currentUser || currentUser === '') {
             $uibModal.open({
-                templateUrl: '/templates/login.html',
-                size: 'sm',
-                controller: 'ModalCtrl as modal',
-                keyboard: false,
-                backdrop: 'static'
-            });
+                backdrop: 'static',
+                animation: true,
+                templateUrl: 'templates/login.html',
+                controller: 'UserCtrl',
+                size: 'sm'
+            })
         }
     }
 
