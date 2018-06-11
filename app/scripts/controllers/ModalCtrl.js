@@ -12,7 +12,7 @@
                Room.create(this.room);
              });
            };
-           
+
         modal.cancel = function () {
             $uibModalInstance.dismiss();
         };
