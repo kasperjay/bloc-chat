@@ -8,7 +8,6 @@
         this.setCurrentRoom = function (room) {
             this.currentRoom = room;
             this.messages = Message.getByRoomId(this.currentRoom.$id);
-            console.log(home.messages)
         }
 
         home.addRoom = function() {
